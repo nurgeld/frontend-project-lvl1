@@ -13,6 +13,7 @@
   "keywords": [
     "js"
   ],
+  "type": "module",
   "author": "nurgeldy",
   "license": "ISC",
   "bugs": {
