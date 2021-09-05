@@ -9,13 +9,13 @@ export default () => {
   const task = 'Answer "yes" if the number is even, otherwise answer "no".';
   console.log(task);
 
-  let i = 0;
+  let i = 1;
   while (i <= steps) {
     const randNumber = Math.floor(Math.random() * 1000);
     const correctAnswer = randNumber % 2 === 0 ? 'no' : 'yes';
     console.log(`Question: ${randNumber}`);
     const answer = readlineSync.question('Your answer: ');
-    if (Number(answer) === correctAnswer) {
+    if (answer === correctAnswer) {
       console.log('Correct!');
     } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
