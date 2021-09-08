@@ -10,7 +10,7 @@ export const progressionGameLogic = () => {
   const firstElement = random(1, 15);
   const step = random(1, 15);
   const lengthOfProgression = random(5, 15);
-  const position = random(2, 10);
+  const position = random(2, lengthOfProgression);
   const answer = getElementOfProgression(firstElement, step, position);
   const progression = [];
   let i = 0;

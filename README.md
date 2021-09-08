@@ -7,3 +7,6 @@
 [(asciinema demo of brain-even game)](https://asciinema.org/a/vDtqNpIg5OkWGct5BmuI3918q)
 
 [(asciinema demo of brain-calc game)](https://asciinema.org/a/rdtoQjEkSap2a5FjkHCz3MePP)
+
+[(asciinema demo of brain-progression game)](https://asciinema.org/a/QveUlEO5As5LhAWa9tT0qyXm0)
+
