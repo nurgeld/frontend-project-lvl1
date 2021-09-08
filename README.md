@@ -10,3 +10,4 @@
 
 [(asciinema demo of brain-progression game)](https://asciinema.org/a/QveUlEO5As5LhAWa9tT0qyXm0)
 
+[(asciinema demo of brain-prime game)](https://asciinema.org/a/SJF4XEtG2s8SSY1PRZmKqg4LM)
