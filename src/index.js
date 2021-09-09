@@ -19,7 +19,7 @@ export default (game) => {
     } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
       console.log(`Let's try again, ${name}!`);
-      return;
+      break;
     }
     i += 1;
   }
