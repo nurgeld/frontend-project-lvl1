@@ -8,6 +8,8 @@
 
 [(asciinema demo of brain-calc game)](https://asciinema.org/a/rdtoQjEkSap2a5FjkHCz3MePP)
 
+[(asciinema demo of brain-gcd game)](https://asciinema.org/a/bcBYmQ4qrE0wn2XsSJtOJQGa6)
+
 [(asciinema demo of brain-progression game)](https://asciinema.org/a/QveUlEO5As5LhAWa9tT0qyXm0)
 
 [(asciinema demo of brain-prime game)](https://asciinema.org/a/SJF4XEtG2s8SSY1PRZmKqg4LM)
