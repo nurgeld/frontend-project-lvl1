@@ -1,4 +1,5 @@
-import gameEngine from '../index.js';
+import run from '../index.js';
+import getRandNum from '../randomizer.js';
 
 const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -13,10 +14,10 @@ export const isPrime = (num, curr = 2) => {
   return isPrime(num, curr + 1);
 };
 
-export const primeGameLogic = () => {
-  const question = Math.floor(Math.random() * 100);
+export const runGame = () => {
+  const question = getRandNum(1, 500);
   const answer = isPrime(question) ? 'yes' : 'no';
   return [question, answer];
 };
 
-export default () => gameEngine([task, primeGameLogic]);
+export default () => run(task, runGame);

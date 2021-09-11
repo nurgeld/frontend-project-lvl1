@@ -1,27 +1,22 @@
 import readlineSync from 'readline-sync';
 
-const steps = 3;
-export default (game) => {
+const maxStepsCount = 3;
+export default (task, gameParts) => {
   const name = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${name}`);
 
-  const [task, gameParts] = game;
-
   console.log(task);
 
-  let i = 1;
-  while (i <= steps) {
+  for (let i = 1; i <= maxStepsCount; i += 1) {
     const [question, correctAnswer] = gameParts();
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
-    if (answer === correctAnswer) {
-      console.log('Correct!');
-    } else {
+    if (answer !== correctAnswer) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
       console.log(`Let's try again, ${name}!`);
       return;
     }
-    i += 1;
+    console.log('Correct!');
   }
   console.log(`Congratulations, ${name}!`);
 };

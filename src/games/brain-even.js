@@ -1,12 +1,14 @@
-/* eslint-disable linebreak-style */
 import gameEngine from '../index.js';
+import getRandNum from '../randomizer.js';
 
 const task = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-export const evenGameLogic = () => {
-  const question = Math.floor(Math.random() * 1000);
-  const answer = question % 2 === 0 ? 'yes' : 'no';
+export const isEven = (num) => num % 2 === 0;
+
+export const runGame = () => {
+  const question = getRandNum(1, 1000);
+  const answer = isEven(question) ? 'yes' : 'no';
   return [question, answer];
 };
 
-export default () => gameEngine([task, evenGameLogic]);
+export default () => gameEngine(task, runGame);

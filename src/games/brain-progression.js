@@ -1,27 +1,30 @@
-import gameEngine from '../index.js';
+import run from '../index.js';
+import getRandNum from '../randomizer.js';
 
 const task = 'What number is missing in the progression?';
 
 export const getElementOfProgression = (a, d, n) => a + ((n - 1) * d);
 
-export const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-
-export const progressionGameLogic = () => {
-  const firstElement = random(1, 15);
-  const step = random(1, 15);
-  const lengthOfProgression = random(5, 15);
-  const position = random(2, lengthOfProgression);
-  const answer = getElementOfProgression(firstElement, step, position);
+export const generateProgression = (initialTerm, step, lengthOfProgression) => {
   const progression = [];
-  let i = 0;
-  while (i < lengthOfProgression) {
-    const element = i === position ? '..' : getElementOfProgression(firstElement, step, i);
-    progression.push(element);
-    i += 1;
+  for (let n = 1; n <= lengthOfProgression; n += 1) {
+    const nthTerm = getElementOfProgression(initialTerm, step, n);
+    progression.push(nthTerm);
   }
+  return progression;
+};
+
+export const runGame = () => {
+  const firstElement = getRandNum(-15, 15);
+  const step = getRandNum(1, 15);
+  const lengthOfProgression = getRandNum(5, 15);
+  const position = getRandNum(2, lengthOfProgression);
+  const progression = generateProgression(firstElement, step, lengthOfProgression);
+  progression[position - 1] = '..';
   const question = progression.join(' ');
+  const answer = getElementOfProgression(firstElement, step, position);
 
   return [question, String(answer)];
 };
 
-export default () => gameEngine([task, progressionGameLogic]);
+export default () => run(task, runGame);
