@@ -1,28 +1,40 @@
 import run from '../index.js';
-import getRandNum from '../randomizer.js';
+import getRandomNumber from '../randomizer.js';
 
 const task = 'What number is missing in the progression?';
 
-export const getElementOfProgression = (a, d, n) => a + ((n - 1) * d);
+export const calculateElementOfProgression = (progression, index) => {
+  const firstTerm = progression[0];
+  const secondTerm = progression[1];
+  const commonDifference = secondTerm - firstTerm;
+  return firstTerm + index * commonDifference;
+};
 
-export const generateProgression = (initialTerm, step, lengthOfProgression) => {
+export const generateProgression = (firstTerm, commonDifference, lengthOfProgression) => {
   const progression = [];
-  for (let n = 1; n <= lengthOfProgression; n += 1) {
-    const nthTerm = getElementOfProgression(initialTerm, step, n);
+  for (let n = 0; n < lengthOfProgression; n += 1) {
+    const nthTerm = firstTerm + n * commonDifference;
     progression.push(nthTerm);
   }
-  return progression;
+  const indexOfElementToMask = getRandomNumber(0, lengthOfProgression - 1);
+  progression[indexOfElementToMask] = '..';
+  return progression.join(' ');
 };
 
 export const runGame = () => {
-  const firstElement = getRandNum(-15, 15);
-  const step = getRandNum(1, 15);
-  const lengthOfProgression = getRandNum(5, 15);
-  const position = getRandNum(2, lengthOfProgression);
-  const progression = generateProgression(firstElement, step, lengthOfProgression);
-  progression[position - 1] = '..';
-  const question = progression.join(' ');
-  const answer = getElementOfProgression(firstElement, step, position);
+  const firstTerm = getRandomNumber(-15, 15);
+  const commonDifference = getRandomNumber(1, 15);
+  const lengthOfProgression = getRandomNumber(5, 15);
+  const progression = generateProgression(firstTerm, commonDifference, lengthOfProgression);
+  const question = progression;
+  let indexOfMaskedElement;
+  const elementsOfProgression = progression.split(' ');
+  for (let i = 0; i < elementsOfProgression.length; i += 1) {
+    if (elementsOfProgression[i] === '..') {
+      indexOfMaskedElement = i;
+    }
+  }
+  const answer = calculateElementOfProgression(progression, indexOfMaskedElement);
 
   return [question, String(answer)];
 };

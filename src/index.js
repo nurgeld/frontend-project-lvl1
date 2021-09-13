@@ -7,7 +7,7 @@ export default (task, gameParts) => {
 
   console.log(task);
 
-  for (let i = 1; i <= maxStepsCount; i += 1) {
+  for (let i = 0; i < maxStepsCount; i += 1) {
     const [question, correctAnswer] = gameParts();
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');

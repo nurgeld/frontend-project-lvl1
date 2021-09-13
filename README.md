@@ -1,4 +1,4 @@
-# frontend-project-lvl1
+# Simple CLI games (developed while learning programming on Hexlet)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/a6bdf687749cc8f4ada3/maintainability)](https://codeclimate.com/github/nurgeld/frontend-project-lvl1/maintainability) 
 [![Node.js CI](https://github.com/nurgeld/frontend-project-lvl1/actions/workflows/brain-games.yml/badge.svg)](https://github.com/nurgeld/frontend-project-lvl1/actions/workflows/brain-games.yml)
@@ -6,6 +6,31 @@
 **Hexlet tests and linter status:**
 
 [![hexlet-check](https://github.com/nurgeld/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/nurgeld/frontend-project-lvl1/actions/workflows/hexlet-check.yml)
+
+
+**Setup:**
+
+```sh
+$ make install
+```
+
+**Play:**
+
+```sh
+$ make brain-even
+```
+```sh
+$ make brain-calc
+```
+```sh
+$ make brain-gcd
+```
+```sh
+$ make brain-prime
+```
+```sh
+$ make brain-progression
+```
 
 **Demo:**
 

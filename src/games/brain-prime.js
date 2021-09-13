@@ -1,23 +1,23 @@
 import run from '../index.js';
-import getRandNum from '../randomizer.js';
+import getRandomNumber from '../randomizer.js';
 
 const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-export const isPrime = (num, curr = 2) => {
-  if (curr ** 2 > num) {
+export const isPrime = (number, currNumber = 2) => {
+  if (currNumber ** 2 > number) {
     return true;
   }
-  if (num % curr === 0) {
+  if (number % currNumber === 0) {
     return false;
   }
 
-  return isPrime(num, curr + 1);
+  return isPrime(number, currNumber + 1);
 };
 
-export const runGame = () => {
-  const question = getRandNum(1, 500);
+export const runGameRound = () => {
+  const question = getRandomNumber(1, 500);
   const answer = isPrime(question) ? 'yes' : 'no';
   return [question, answer];
 };
 
-export default () => run(task, runGame);
+export default () => run(task, runGameRound);
