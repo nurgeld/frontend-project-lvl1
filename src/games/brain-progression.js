@@ -3,10 +3,7 @@ import getRandomNumber from '../randomizer.js';
 
 const task = 'What number is missing in the progression?';
 
-export const calculateElementOfProgression = (progression, index) => {
-  const firstTerm = progression[0];
-  const secondTerm = progression[1];
-  const commonDifference = secondTerm - firstTerm;
+export const calculateElementOfProgression = (firstTerm, commonDifference, index) => {
   return firstTerm + index * commonDifference;
 };
 
@@ -34,7 +31,7 @@ export const runGame = () => {
       indexOfMaskedElement = i;
     }
   }
-  const answer = calculateElementOfProgression(progression, indexOfMaskedElement);
+  const answer = calculateElementOfProgression(firstTerm, commonDifference, indexOfMaskedElement);
 
   return [question, String(answer)];
 };
