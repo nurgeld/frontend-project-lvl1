@@ -3,9 +3,7 @@ import getRandomNumber from '../randomizer.js';
 
 const task = 'What number is missing in the progression?';
 
-export const calculateElementOfProgression = (firstTerm, commonDifference, index) => {
-  return firstTerm + index * commonDifference;
-};
+export const calculateElementOfProgression = (firstTerm, commonDifference, index) => firstTerm + index * commonDifference;
 
 export const generateProgression = (firstTerm, commonDifference, lengthOfProgression) => {
   const progression = [];
