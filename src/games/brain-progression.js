@@ -5,33 +5,28 @@ const task = 'What number is missing in the progression?';
 
 const calculateElementOfProgression = (first, difference, index) => first + index * difference;
 
-export const generateProgression = (firstTerm, commonDifference, lengthOfProgression) => {
+export const generateProgression = (first, difference, lengthOfProgression, indexToMask = null) => {
   const progression = [];
   for (let n = 0; n < lengthOfProgression; n += 1) {
-    const nthTerm = firstTerm + n * commonDifference;
+    const nthTerm = first + n * difference;
     progression.push(nthTerm);
   }
-  const indexOfElementToMask = getRandomNumber(0, lengthOfProgression - 1);
-  progression[indexOfElementToMask] = '..';
+  if (indexToMask !== null) {
+    progression[indexToMask] = '..';
+    return progression.join(' ');
+  }
   return progression.join(' ');
 };
 
-export const runGame = () => {
+export const runGameRound = () => {
   const firstTerm = getRandomNumber(-15, 15);
   const commonDifference = getRandomNumber(1, 15);
   const lengthOfProgression = getRandomNumber(5, 15);
-  const progression = generateProgression(firstTerm, commonDifference, lengthOfProgression);
-  const question = progression;
-  let indexOfMaskedElement;
-  const elementsOfProgression = progression.split(' ');
-  for (let i = 0; i < elementsOfProgression.length; i += 1) {
-    if (elementsOfProgression[i] === '..') {
-      indexOfMaskedElement = i;
-    }
-  }
+  const indexOfMaskedElement = getRandomNumber(0, lengthOfProgression - 1);
+  const question = generateProgression(firstTerm, commonDifference, lengthOfProgression, indexToMask);
   const answer = calculateElementOfProgression(firstTerm, commonDifference, indexOfMaskedElement);
 
   return [question, String(answer)];
 };
 
-export default () => run(task, runGame);
+export default () => run(task, runGameRound);
