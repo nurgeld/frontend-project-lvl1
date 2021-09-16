@@ -19,11 +19,11 @@ export const generateProgression = (first, difference, lengthOfProgression, inde
 };
 
 export const runGameRound = () => {
-  const firstTerm = getRandomNumber(-15, 15);
-  const commonDifference = getRandomNumber(1, 15);
+  const first = getRandomNumber(-15, 15);
+  const difference = getRandomNumber(1, 15);
   const lengthOfProgression = getRandomNumber(5, 15);
   const indexOfMaskedElement = getRandomNumber(0, lengthOfProgression - 1);
-  const question = generateProgression(firstTerm, commonDifference, lengthOfProgression, indexToMask);
+  const question = generateProgression(first, difference, lengthOfProgression, indexOfMaskedElement);
   const answer = calculateElementOfProgression(firstTerm, commonDifference, indexOfMaskedElement);
 
   return [question, String(answer)];
