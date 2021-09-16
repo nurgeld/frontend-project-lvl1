@@ -4,22 +4,16 @@ import getRandomNumber from '../randomizer.js';
 const task = 'What is the result of the expression?';
 
 const calculate = (operand1, operand2, operator) => {
-  let result;
   switch (operator) {
     case '+':
-      result = operand1 + operand2;
-      break;
+      return operand1 + operand2;
     case '-':
-      result = operand1 - operand2;
-      break;
+      return operand1 - operand2;
     case '*':
-      result = operand1 * operand2;
-      break;
+      return operand1 * operand2;
     default:
-      console.log('unexpected operation!');
-      break;
+      throw new Error(`unexpected operation ${operator}!`);
   }
-  return result;
 };
 
 export const runGameRound = () => {
