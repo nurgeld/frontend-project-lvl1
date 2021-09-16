@@ -18,39 +18,39 @@ $ npm link
 **Play:**
 
 ```sh
-$ make brain-even
+$ brain-even
 ```
 ```sh
-$ make brain-calc
+$ brain-calc
 ```
 ```sh
-$ make brain-gcd
+$ brain-gcd
 ```
 ```sh
-$ make brain-prime
+$ brain-prime
 ```
 ```sh
-$ make brain-progression
+$ brain-progression
 ```
 
 **Demo:**
 
 1) brain-even game
 
-[![asciicast](https://asciinema.org/a/3yQI9OS7lp8ad7U830Qt8WHBz.svg)](https://asciinema.org/a/3yQI9OS7lp8ad7U830Qt8WHBz)
+[![asciicast](https://asciinema.org/a/HTuGi4DHgNWkPtvjRyz50hNXp.svg)](https://asciinema.org/a/HTuGi4DHgNWkPtvjRyz50hNXp)
 
 2) brain-calc game
 
-[![asciicast](https://asciinema.org/a/rdtoQjEkSap2a5FjkHCz3MePP.svg)](https://asciinema.org/a/rdtoQjEkSap2a5FjkHCz3MePP)
+[![asciicast](https://asciinema.org/a/JzRWDPuOBrCWmRKJ5olPoccFN.svg)](https://asciinema.org/a/JzRWDPuOBrCWmRKJ5olPoccFN)
 
 3) brain-gcd game
 
-[![asciicast](https://asciinema.org/a/bcBYmQ4qrE0wn2XsSJtOJQGa6.svg)](https://asciinema.org/a/bcBYmQ4qrE0wn2XsSJtOJQGa6)
+[![asciicast](https://asciinema.org/a/G4hSFBF0rt7bMmD5leYN1MDav.svg)](https://asciinema.org/a/G4hSFBF0rt7bMmD5leYN1MDav)
 
 4) brain-progression game
 
-[![asciicast](https://asciinema.org/a/QveUlEO5As5LhAWa9tT0qyXm0.svg)](https://asciinema.org/a/QveUlEO5As5LhAWa9tT0qyXm0)
+[![asciicast](https://asciinema.org/a/EwrN4AuX1YB6QuQiFb5y1unAJ.svg)](https://asciinema.org/a/EwrN4AuX1YB6QuQiFb5y1unAJ)
 
 5) brain-prime game
 
-[![asciicast](https://asciinema.org/a/SJF4XEtG2s8SSY1PRZmKqg4LM.svg)](https://asciinema.org/a/SJF4XEtG2s8SSY1PRZmKqg4LM)
+[![asciicast](https://asciinema.org/a/2H9QK3EOkpKdjDqZRPLOsjuYN.svg)](https://asciinema.org/a/2H9QK3EOkpKdjDqZRPLOsjuYN)

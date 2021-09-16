@@ -5,7 +5,7 @@ const task = 'What number is missing in the progression?';
 
 const calculateElementOfProgression = (first, difference, index) => first + index * difference;
 
-export const generateProgression = (first, difference, progressionLength, indexToMask = null) => {
+const generateProgression = (first, difference, progressionLength, indexToMask = null) => {
   const progression = [];
   for (let n = 0; n < progressionLength; n += 1) {
     const nthTerm = first + n * difference;
