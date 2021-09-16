@@ -12,6 +12,7 @@
 
 ```sh
 $ make install
+$ npm link
 ```
 
 **Play:**
