@@ -4,7 +4,7 @@ import getRandomNumber from '../randomizer.js';
 const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 export const isPrime = (number, currNumber = 2) => {
-  if (number === 1) {
+  if (number <= 1) {
     return false;
   }
   if (currNumber ** 2 > number) {
