@@ -20,7 +20,7 @@ export const runGameRound = () => {
   const operand1 = getRandomNumber(1, 100);
   const operand2 = getRandomNumber(1, 100);
   const operators = ['+', '-', '*'];
-  const operator = operators[getRandomNumber(0, 2)];
+  const operator = operators[getRandomNumber(0, operators.length - 1)];
   const question = `${operand1} ${operator} ${operand2}`;
   const answer = calculate(operand1, operand2, operator);
   return [question, String(answer)];
