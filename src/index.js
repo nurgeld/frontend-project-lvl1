@@ -1,9 +1,10 @@
 import readlineSync from 'readline-sync';
-import greetUser from './cli.js';
 
 const maxStepsCount = 3;
 export default (task, gameParts) => {
-  const name = greetUser();
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name?: ');
+  console.log(`Hello, ${name}`);
   console.log(task);
 
   for (let i = 0; i < maxStepsCount; i += 1) {
